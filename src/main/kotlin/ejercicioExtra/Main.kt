@@ -1,4 +1,4 @@
-package EjercicioExtra
+package ejercicioExtra
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.Column
