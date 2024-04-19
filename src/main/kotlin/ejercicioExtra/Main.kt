@@ -26,7 +26,7 @@ fun App() {
                 count++
                 primerClic = false
             }) {
-                Text(if (primerClic) "Empezar" else "Contador: $count")
+                Text(if (count == 0) "Empezar" else "Contador: $count")
             }
 
             Button(onClick = { count = 0 }) {
