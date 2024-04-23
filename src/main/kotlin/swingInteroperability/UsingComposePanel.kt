@@ -41,11 +41,11 @@ fun main() =
         window.defaultCloseOperation = WindowConstants.EXIT_ON_CLOSE
         window.title = "SwingComposeWindow"
 
-        window.contentPane.add(actionButton("NORTH", action = { northClicks.value++ }), BorderLayout.NORTH)
-        window.contentPane.add(actionButton("WEST", action = { westClicks.value++ }), BorderLayout.WEST)
-        window.contentPane.add(actionButton("EAST", action = { eastClicks.value++ }), BorderLayout.EAST)
+        window.contentPane.add(actionButtonOne("NORTH", action = { northClicks.value++ }), BorderLayout.NORTH)
+        window.contentPane.add(actionButtonOne("WEST", action = { westClicks.value++ }), BorderLayout.WEST)
+        window.contentPane.add(actionButtonOne("EAST", action = { eastClicks.value++ }), BorderLayout.EAST)
         window.contentPane.add(
-            actionButton(
+            actionButtonOne(
                 text = "SOUTH/REMOVE COMPOSE",
                 action = {
                     window.contentPane.remove(composePanel)
@@ -66,7 +66,7 @@ fun main() =
         window.isVisible = true
     }
 
-fun actionButton(
+fun actionButtonOne(
     text: String,
     action: () -> Unit,
 ): JButton {
